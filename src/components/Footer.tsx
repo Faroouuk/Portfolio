@@ -1,0 +1,1 @@
+export default function Footer(){return <footer className="border-t border-white/10 py-7"><div className="shell flex flex-col justify-between gap-3 text-xs text-zinc-600 sm:flex-row"><p>© {new Date().getFullYear()} Abdelrahman Farouk</p><p className="font-mono uppercase tracking-wider">Designed &amp; engineered end-to-end</p></div></footer>}

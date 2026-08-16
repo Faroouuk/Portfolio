@@ -1,0 +1,1 @@
+export default function SectionHeading({label,title,intro}:{label:string;title:string;intro?:string}) { return <div className="max-w-2xl"><p className="eyebrow">{label}</p><h2 className="section-title">{title}</h2>{intro&&<p className="muted mt-5 max-w-xl text-base leading-7 sm:text-lg">{intro}</p>}</div>; }

@@ -1,26 +1,10 @@
 @import "tailwindcss";
-
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
-}
+:root { --background: #090a0c; --foreground: #f4f4f5; --muted: #a1a1aa; --accent: #a3e635; }
+@theme inline { --color-background: var(--background); --color-foreground: var(--foreground); --font-sans: Arial, Helvetica, sans-serif; --font-mono: "SFMono-Regular", Consolas, monospace; }
+* { box-sizing: border-box; } html { scroll-behavior: smooth; scroll-padding-top: 6rem; } body { margin: 0; overflow-x: hidden; background: var(--background); color: var(--foreground); font-family: Arial, Helvetica, sans-serif; } ::selection { background: rgba(163,230,53,.25); color: white; }
+a, button { outline-offset: 4px; } a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); border-radius: 4px; }
+.shell { width: min(1180px, calc(100% - 2.5rem)); margin-inline: auto; } .section { padding-block: clamp(5rem, 10vw, 9rem); border-top: 1px solid rgba(255,255,255,.08); }
+.eyebrow { font: 600 .72rem/1 var(--font-geist-mono); text-transform: uppercase; letter-spacing: .16em; color: var(--accent); } .section-title { margin-top: 1rem; font-size: clamp(2rem,4vw,3.5rem); line-height: 1.02; letter-spacing: -.05em; font-weight: 560; } .muted { color: var(--muted); }
+.button { display: inline-flex; align-items: center; justify-content: center; gap: .55rem; min-height: 2.75rem; padding: 0 1rem; border: 1px solid rgba(255,255,255,.14); border-radius: .6rem; font-size: .875rem; font-weight: 600; transition: .2s ease; } .button:hover { background: rgba(255,255,255,.07); border-color: rgba(255,255,255,.3); transform: translateY(-1px); } .button-primary { background: var(--accent); color: #12150e; border-color: var(--accent); } .button-primary:hover { background: #bef264; border-color: #bef264; }
+.grid-noise { background-image: linear-gradient(rgba(255,255,255,.025) 1px, transparent 1px), linear-gradient(90deg,rgba(255,255,255,.025) 1px,transparent 1px); background-size: 44px 44px; }
+@media(max-width:640px){.shell{width:min(100% - 1.5rem,1180px)}.section{padding-block:4.75rem}} @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important}}
